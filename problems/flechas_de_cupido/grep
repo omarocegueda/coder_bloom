@@ -1,0 +1,54 @@
+In file included from /usr/include/c++/12/string:48,
+                 from /usr/include/c++/12/bits/locale_classes.h:40,
+                 from /usr/include/c++/12/bits/ios_base.h:41,
+                 from /usr/include/c++/12/ios:42,
+                 from /usr/include/c++/12/ostream:38,
+                 from /usr/include/c++/12/iostream:39,
+                 from flechas_de_cupido.cc:4:
+/usr/include/c++/12/bits/stl_function.h: In instantiation of ‘constexpr bool std::less<_Tp>::operator()(const _Tp&, const _Tp&) const [with _Tp = Point]’:
+/usr/include/c++/12/bits/stl_tree.h:2117:35:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = Point; _Val = Point; _KeyOfValue = std::_Identity<Point>; _Compare = std::less<Point>; _Alloc = std::allocator<Point>; key_type = Point]’
+/usr/include/c++/12/bits/stl_tree.h:2170:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = const Point&; _Key = Point; _Val = Point; _KeyOfValue = std::_Identity<Point>; _Compare = std::less<Point>; _Alloc = std::allocator<Point>]’
+/usr/include/c++/12/bits/stl_set.h:512:25:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(const value_type&) [with _Key = Point; _Compare = std::less<Point>; _Alloc = std::allocator<Point>; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree<Point, Point, std::_Identity<Point>, std::less<Point>, std::allocator<Point> >::const_iterator; typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other = std::allocator<Point>; typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key> = __gnu_cxx::__alloc_traits<std::allocator<Point>, Point>::rebind<Point>; typename _Alloc::value_type = Point; value_type = Point]’
+flechas_de_cupido.cc:48:11:   required from here
+/usr/include/c++/12/bits/stl_function.h:408:20: error: no match for ‘operator<’ (operand types are ‘const Point’ and ‘const Point’)
+  408 |       { return __x < __y; }
+      |                ~~~~^~~~~
+In file included from /usr/include/c++/12/bits/stl_algobase.h:64,
+                 from /usr/include/c++/12/algorithm:60,
+                 from flechas_de_cupido.cc:3:
+/usr/include/c++/12/bits/stl_pair.h:663:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator<(const pair<_T1, _T2>&, const pair<_T1, _T2>&)’
+  663 |     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/12/bits/stl_pair.h:663:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/12/bits/stl_function.h:408:20: note:   ‘const Point’ is not derived from ‘const std::pair<_T1, _T2>’
+  408 |       { return __x < __y; }
+      |                ~~~~^~~~~
+In file included from /usr/include/c++/12/bits/stl_algobase.h:67:
+/usr/include/c++/12/bits/stl_iterator.h:451:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator<(const reverse_iterator<_Iterator>&, const reverse_iterator<_Iterator>&)’
+  451 |     operator<(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/12/bits/stl_iterator.h:451:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/12/bits/stl_function.h:408:20: note:   ‘const Point’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  408 |       { return __x < __y; }
+      |                ~~~~^~~~~
+/usr/include/c++/12/bits/stl_iterator.h:496:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const reverse_iterator<_Iterator>&, const reverse_iterator<_IteratorR>&)’
+  496 |     operator<(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/12/bits/stl_iterator.h:496:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/12/bits/stl_function.h:408:20: note:   ‘const Point’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  408 |       { return __x < __y; }
+      |                ~~~~^~~~~
+/usr/include/c++/12/bits/stl_iterator.h:1683:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const move_iterator<_IteratorL>&, const move_iterator<_IteratorR>&)’
+ 1683 |     operator<(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/12/bits/stl_iterator.h:1683:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/12/bits/stl_function.h:408:20: note:   ‘const Point’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  408 |       { return __x < __y; }
+      |                ~~~~^~~~~
+/usr/include/c++/12/bits/stl_iterator.h:1748:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator<(const move_iterator<_IteratorL>&, const move_iterator<_IteratorL>&)’
+ 1748 |     operator<(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/12/bits/stl_iterator.h:1748:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/12/bits/stl_function.h:408:20: note:   ‘const Point’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  408 |       { return __x < __y; }
+      |                ~~~~^~~~~
